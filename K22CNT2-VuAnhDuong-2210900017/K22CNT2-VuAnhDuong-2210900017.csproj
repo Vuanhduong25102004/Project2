@@ -129,11 +129,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ChiTietDonHangController.cs" />
     <Compile Include="Controllers\DanhMucController.cs" />
+    <Compile Include="Controllers\DonHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachHangController.cs" />
     <Compile Include="Controllers\QuanTriController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
+    <Compile Include="Controllers\ThanhToanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -263,6 +266,21 @@
     <Content Include="Views\DanhMuc\Details.cshtml" />
     <Content Include="Views\DanhMuc\Edit.cshtml" />
     <Content Include="Views\DanhMuc\Index.cshtml" />
+    <Content Include="Views\ChiTietDonHang\Create.cshtml" />
+    <Content Include="Views\ChiTietDonHang\Delete.cshtml" />
+    <Content Include="Views\ChiTietDonHang\Details.cshtml" />
+    <Content Include="Views\ChiTietDonHang\Edit.cshtml" />
+    <Content Include="Views\ChiTietDonHang\Index.cshtml" />
+    <Content Include="Views\ThanhToan\Create.cshtml" />
+    <Content Include="Views\ThanhToan\Delete.cshtml" />
+    <Content Include="Views\ThanhToan\Details.cshtml" />
+    <Content Include="Views\ThanhToan\Edit.cshtml" />
+    <Content Include="Views\ThanhToan\Index.cshtml" />
+    <Content Include="Views\DonHang\Create.cshtml" />
+    <Content Include="Views\DonHang\Delete.cshtml" />
+    <Content Include="Views\DonHang\Details.cshtml" />
+    <Content Include="Views\DonHang\Edit.cshtml" />
+    <Content Include="Views\DonHang\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
