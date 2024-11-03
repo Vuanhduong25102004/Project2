@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78543c7cb8a14796b7438638b0040a4d" Name="Diagram1">
+        <EntityTypeShape EntityType="cuahangdoannhanhModel.CHI_TIET_DON_HANG" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="cuahangdoannhanhModel.DANH_MUC" Width="1.5" PointX="7.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="cuahangdoannhanhModel.DON_HANG" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="cuahangdoannhanhModel.KHACH_HANG" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="cuahangdoannhanhModel.QUAN_TRI" Width="1.5" PointX="7.375" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="cuahangdoannhanhModel.SAN_PHAM" Width="1.5" PointX="1" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="cuahangdoannhanhModel.THANH_TOAN" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="cuahangdoannhanhModel.FK__CHI_TIET_D__MaDH__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="cuahangdoannhanhModel.FK__CHI_TIET_D__MaSP__59063A47" ManuallyRouted="false" />
+        <AssociationConnector Association="cuahangdoannhanhModel.FK__DON_HANG__MaKH__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="cuahangdoannhanhModel.FK__THANH_TOAN__MaDH__5535A963" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

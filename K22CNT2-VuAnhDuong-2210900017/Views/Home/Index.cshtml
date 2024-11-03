@@ -1,0 +1,92 @@
+﻿@{
+    ViewBag.Title = "Trang chủ";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-warning text-dark text-center p-4">
+        <h1>Chào mừng đến FastFood Express!</h1>
+        <p>Nơi yêu thích cho đồ ăn nhanh của bạn</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mt-5">
+        <!-- About Us Section -->
+        <section class="about-us text-center mb-5">
+            <h2>Giới Thiệu</h2>
+            <p class="mt-3">FastFood Express mang đến cho bạn những món ăn nhanh ngon miệng, kết hợp giữa hương vị đặc trưng và nguyên liệu chất lượng cao. Sứ mệnh của chúng tôi là cung cấp bữa ăn nhanh chóng và ngon miệng mà bạn có thể thưởng thức ngay tại cửa hàng ấm cúng của chúng tôi.</p>
+            <img src="@Url.Content("~/Content/images/FastFoodExpress.png")" class="img-fluid rounded my-4" alt="Ảnh giới thiệu">
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="why-choose-us bg-light p-5 mb-5">
+            <h2 class="text-center">Tại Sao Chọn Chúng Tôi?</h2>
+            <div class="row text-center mt-4">
+                <div class="col-md-4">
+                    <img src="@Url.Content("~/Content/images/freshimg.png")" class="img-fluid rounded-circle mb-3" alt="Nguyên liệu chất lượng">
+                    <h4>Nguyên Liệu Chất Lượng</h4>
+                    <p>Chỉ sử dụng nguyên liệu tươi ngon và chất lượng nhất cho từng món ăn.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="@Url.Content("~/Content/images/fast-service.png")" class="img-fluid rounded-circle mb-3" alt="Dịch vụ nhanh chóng">
+                    <h4>Dịch Vụ Nhanh Chóng</h4>
+                    <p>Phục vụ nhanh chóng và hiệu quả để bạn có thể thưởng thức ngay không phải chờ đợi.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="@Url.Content("~/Content/images/cozy-space..png")" class="img-fluid rounded-circle mb-3" alt="Không gian ấm cúng">
+                    <h4>Không Gian Ấm Cúng</h4>
+                    <p>Một không gian thoải mái, giúp bạn thư giãn và tận hưởng bữa ăn của mình.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials text-center mb-5">
+            <h2>Khách Hàng Nói Gì</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Trải nghiệm đồ ăn nhanh tuyệt vời nhất! Dịch vụ rất nhanh và hương vị không thể chê vào đâu được."</p>
+                        <footer class="blockquote-footer">Nguyễn Văn A</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Giao hàng rất nhanh và tiết kiệm. Tôi luôn đặt hàng để ăn cùng bạn bè!"</p>
+                        <footer class="blockquote-footer">Trần Thị B</footer>
+                    </blockquote>
+                </div>
+                <div class="col-md-4">
+                    <blockquote class="blockquote">
+                        <p>"Tôi luôn chọn FastFood Express khi muốn bữa ăn nhanh và ngon. Rất khuyến khích!"</p>
+                        <footer class="blockquote-footer">Lê Văn C</footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Section -->
+        <section class="call-to-action bg-danger text-white text-center p-5 mb-5">
+            <h2>Sẵn Sàng Thử Các Món Ngon Của Chúng Tôi?</h2>
+            <p class="mt-3">Đặt hàng ngay hoặc ghé thăm chúng tôi để trải nghiệm món ăn nhanh tuyệt vời nhất!</p>
+            <a href="/order" class="btn btn-light btn-lg mt-3">Đặt Hàng Ngay</a>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center p-3">
+        <p>&copy; 2024 FastFood Express. Mọi quyền được bảo lưu.</p>
+        <p>Theo dõi chúng tôi trên <a href="#" class="text-white">Facebook</a> | <a href="#" class="text-white">Instagram</a> | <a href="#" class="text-white">Twitter</a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
