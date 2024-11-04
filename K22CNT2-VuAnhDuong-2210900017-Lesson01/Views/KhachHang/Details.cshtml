@@ -1,0 +1,50 @@
+﻿@model K22CNT2_VuAnhDuong_2210900017.Models.KHACH_HANG
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Thông tin</h2>
+
+<div>
+    <h4>Khách hàng</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <span>Tên khách hàng</span>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ten_KH)
+        </dd>
+
+        <dt>
+            <span>SĐT</span>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            <span>Email</span>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            <span>Địa chỉ</span>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dia_chi)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaKH }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index", null, new {@class="btn btn-success"})
+</p>

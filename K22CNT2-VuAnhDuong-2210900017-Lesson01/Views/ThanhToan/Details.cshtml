@@ -1,0 +1,50 @@
+﻿@model K22CNT2_VuAnhDuong_2210900017.Models.THANH_TOAN
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>THANH_TOAN</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.PhuongThuc)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PhuongThuc)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Trangthai)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Trangthai)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.DON_HANG.TenDH)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.DON_HANG.TenDH)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.MaTT }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>
