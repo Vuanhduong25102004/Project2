@@ -1,0 +1,44 @@
+﻿@model List<K22CNT2_VuAnhDuong_2210900017_.ModelViews.CartItem>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Thông tin thanh toán</h2>
+<table class="table">
+    <tr>
+        <th>Hình ảnh</th>
+        <th>Sản phẩm</th>
+        <th>Đơn giá</th>
+        <th>Số lượng</th>
+        <th>Thành tiền</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td><img src="@Url.Content("~/Content/images/AnhSP/" + item.Image)" alt="Product Image" width="60" height="60" /></td>
+            <td>@item.Name</td>
+            <td>@item.Price.ToString("C", new System.Globalization.CultureInfo("vi-VN"))</td>
+            <td>@item.Qty</td>
+            <td>@item.Total.ToString("C", new System.Globalization.CultureInfo("vi-VN"))</td>
+        </tr>
+    }
+</table>
+<p><strong>Tổng cộng:</strong> @Model.Sum(x => x.Total).ToString("C", new System.Globalization.CultureInfo("vi-VN"))</p>
+
+@using (Html.BeginForm("ThanhToan", "Cart"))
+{
+    <h3>Thông tin khách hàng</h3>
+    <div class="form-group">
+        <label>Họ tên người nhận</label>
+        <input name="Ten_KH" />
+    </div>
+    <div class="form-group">
+        <label>Địa chỉ người nhận</label>
+        <input name="Dia_chi" />
+    </div>
+    <div class="form-group">
+        <label>Số điện thoại người nhận</label>
+        <input name="SDT" />
+    </div>
+
+    <button>Thanh toán</button>
+}
