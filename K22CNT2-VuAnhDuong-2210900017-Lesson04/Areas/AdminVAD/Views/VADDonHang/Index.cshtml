@@ -1,0 +1,81 @@
+﻿@model IEnumerable<K22CNT2_VuAnhDuong_2210900017_.Models.DON_HANG>
+
+@{
+    ViewBag.Title = "Thong tin don hang";
+    Layout = "~/Areas/AdminVAD/Views/Shared/_Layout.cshtml";
+   
+}
+
+<h2>Quản lý đơn hàng</h2>
+<hr/>
+<table class="table">
+    <tr>
+        <th>
+            <span>Mã đơn hàng</span>
+        </th>
+        <th>
+            <span>Ngày đặt</span>
+        </th>
+        <th>
+            <span>Tên khách hàng</span>
+        </th>
+        <th>
+            <span>SDT</span>
+        </th>
+        <th>
+            <span>Địa chỉ</span>
+        </th>
+        <th>
+            <span>Email</span>
+        </th>
+        <th>
+            <span>Trạng thái</span>
+        </th>
+   
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaDH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ngay_dat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ten_KH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dia_chi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @{if (item.TrangThai == 0)
+                {
+                    <span class="text-danger">Chờ xử lý</span>
+                }
+                else if (item.TrangThai == 1)
+                {
+                    <span class="text-info">Đang xử lý</span>
+                    }
+                    else
+                    {
+                    <span class="text-success">Đã hoàn thành</span>
+                    }
+            }
+        </td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaDH }, new {@class = "btn btn-primary" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaDH },new {@class = "btn btn-danger"})
+        </td>
+    </tr>
+}
+
+</table>
