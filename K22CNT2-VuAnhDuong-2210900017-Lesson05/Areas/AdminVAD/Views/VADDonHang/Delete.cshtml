@@ -1,0 +1,102 @@
+﻿@model K22CNT2_VuAnhDuong_2210900017_.Models.DON_HANG
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/AdminVAD/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Bạn có muốn xóa đơn hàng này không ?</h2>
+
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <span>Tên đơn hàng</span>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenDH)
+        </dd>
+
+        <dt>
+            <span>Ngày đặt</span>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ngay_dat)
+        </dd>
+
+        <dt>
+            <span>Tên khách hàng</span>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ten_KH)
+        </dd>
+
+        <dt>
+            <span>SDT</span>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            <span>Địa chỉ</span>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dia_chi)
+        </dd>
+
+        <dt>
+            <span>Email</span>
+        </dt>
+
+        <dd>
+            @{
+                if (string.IsNullOrEmpty(Model.Email))
+                {
+                    <span>Trống</span>
+                }
+                else
+                {
+                    @Model.Email
+                }
+
+            }
+        </dd>
+
+        <dt>
+            <span>Trạng thái</span>
+        </dt>
+
+        <dd>
+            @{if (Model.TrangThai == 0)
+                {
+                    <span class="text-danger">Chờ xử lý</span>
+                }
+                else if (Model.TrangThai == 1)
+                {
+                    <span class="text-info">Đang xử lý</span>
+                }
+                else
+                {
+                    <span class="text-success">Đã hoàn thành</span>
+                }
+            }
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-success" /> |
+            @Html.ActionLink("Back to List", "Index",null,new {@class = "btn btn-primary"})
+        </div>
+    }
+</div>

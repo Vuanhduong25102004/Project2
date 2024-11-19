@@ -1,0 +1,66 @@
+﻿<style>
+    body {
+        background-color: #ffff;
+        color: #fff;
+    }
+
+    .login-container {
+        background-color: #ffff;
+    }
+
+    .login-card {
+        background-color: #2d2f33;
+        border-radius: 8px;
+        max-width: 400px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .form-control {
+        background-color: #444;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .btn-warning {
+        background-color: #ff7a00;
+        border: none;
+        font-weight: bold;
+    }
+
+    .form-group input::placeholder {
+        color: #bbb;
+    }
+</style>
+@{
+    ViewBag.Title = "Thông tin đăng ký";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("dang_ky", "VADKhachHang", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="login-container d-flex align-items-center justify-content-center ">
+        <div class="login-card p-4 text-center">
+            <h2 class="mb-4">Đăng ký</h2>
+            <div class="form-group mb-3 mx-auto" style="max-width: 300px;">
+                <input type="email" class="form-control" id="Email" name="Email" placeholder="Email" required />
+            </div>
+            <div class="form-group mb-3 mx-auto" style="max-width: 300px;">
+                <input type="password" class="form-control" id="MatKhau" name="MatKhau" placeholder="Mật khẩu" required />
+            </div>
+            <div class="form-group mb-3 mx-auto" style="max-width: 300px;">
+                <input type="text" class="form-control" id="HoTenKhachHang" name="HoTenKhachHang" placeholder="Họ tên" required />
+            </div>
+            <div class="form-group mb-3 mx-auto" style="max-width: 300px;">
+                <input type="number" class="form-control" id="DienThoai" name="DienThoai" placeholder="Điện thoại" required />
+            </div>
+            <div class="form-group mb-3 mx-auto" style="max-width: 300px;">
+                <textarea rows="2" class="form-control" id="DiaChi" name="DiaChi" placeholder="Địa chỉ" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning btn-block text-uppercase" style="max-width: 300px;">Đăng ký</button>
+        </div>
+    </div>
+}
+
